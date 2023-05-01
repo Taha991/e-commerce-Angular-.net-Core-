@@ -7,5 +7,18 @@ namespace API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        [HttpGet]
+        public string GetProducts()
+        {
+            return " This is list of products";
+        }
+
+        [HttpGet("{id}")]
+        public string GetProduct(int id)
+        {
+            return "This is the product";
+        }
+
+
     }
 }
