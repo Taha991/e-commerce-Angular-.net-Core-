@@ -35,4 +35,22 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// adding auto migration when running the program
+using var scope = app.Services.CreateScope();
+
+var Services = scope.ServiceProvider;
+ 
+var context  = Services.GetRequiredService<StoreContext>();
+
+var Logger = Services.GetRequiredService<ILogger<StoreContext>>();
+
+try
+{
+    await context.Database.MigrateAsync();
+}
+catch(Exception ex)
+{
+    Logger.LogError(ex, "Error occured while migration process");
+}
+
 app.Run();
