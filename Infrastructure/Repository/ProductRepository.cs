@@ -18,10 +18,22 @@ namespace Infrastructure.Repository
         {
             _context = context;
         }
+
+        public async Task<IReadOnlyList<ProductBrand>> GetAllBrandsAsync()
+        {
+            return await _context.productBrands.ToListAsync();
+        }
+
         public async Task<IReadOnlyList<Product>> GetAllProductsAsync()
         {
 
            return await _context.Products.ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<ProductType>> GetAllTypesAsync()
+        {
+
+            return await _context.productTypes.ToListAsync();
         }
 
         public async Task<Product> GetProductsByIdAsync(int id)

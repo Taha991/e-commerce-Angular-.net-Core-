@@ -35,7 +35,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// adding auto migration when running the program
+// adding auto migration when running the program + sedding some data
 using var scope = app.Services.CreateScope();
 
 var Services = scope.ServiceProvider;

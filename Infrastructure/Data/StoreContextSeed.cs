@@ -23,16 +23,16 @@ namespace Infrastructure.Data
             if (!context.productTypes.Any())
             {
                 var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
-                var types = JsonSerializer.Deserialize<List<ProductBrand>>(typesData);
-                context.productBrands.AddRange(types);
+                var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
+                context.productTypes.AddRange(types);
 
             }
 
             if (!context.Products.Any())
             {
                 var producsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
-                var products = JsonSerializer.Deserialize<List<ProductBrand>>(producsData);
-                context.productBrands.AddRange(products);
+                var products = JsonSerializer.Deserialize<List<Product>>(producsData);
+                context.Products.AddRange(products);
 
             }
 
