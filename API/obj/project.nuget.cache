@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "taSW27rWPnbIQZZvouW/vJKZHSIoP0E+KVP4JMnaJQdZ2vqDSxOI15y8Ou3o9VptfcTHJzxirJKCXD7NfqL2yA==",
+  "dgSpecHash": "uD1UTMfiaUWYYdYobp4R4LFcGBhRX3HsnI/7g1XhDYoIEDRViJNPAG8ym2eEym5g7jO9i42kMrc4LLlROxt1CQ==",
   "success": true,
   "projectFilePath": "F:\\e-commerce-Angular-.net-Core-\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\taha\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.4\\microsoft.data.sqlite.core.7.0.4.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",

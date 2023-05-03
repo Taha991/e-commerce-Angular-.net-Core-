@@ -1,0 +1,15 @@
+F:\e-commerce-Angular-.net-Core-\DTOs\bin\Debug\net7.0\DTOs.deps.json
+F:\e-commerce-Angular-.net-Core-\DTOs\bin\Debug\net7.0\DTOs.dll
+F:\e-commerce-Angular-.net-Core-\DTOs\bin\Debug\net7.0\DTOs.pdb
+F:\e-commerce-Angular-.net-Core-\DTOs\bin\Debug\net7.0\Core.dll
+F:\e-commerce-Angular-.net-Core-\DTOs\bin\Debug\net7.0\Core.pdb
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.csproj.AssemblyReference.cache
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.GeneratedMSBuildEditorConfig.editorconfig
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.AssemblyInfoInputs.cache
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.AssemblyInfo.cs
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.csproj.CoreCompileInputs.cache
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.csproj.CopyComplete
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.dll
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\refint\DTOs.dll
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\DTOs.pdb
+F:\e-commerce-Angular-.net-Core-\DTOs\obj\Debug\net7.0\ref\DTOs.dll

@@ -1,7 +1,9 @@
+
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +22,8 @@ option.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 // DB Generic Repository
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
+// adding automapper 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
 var app = builder.Build();

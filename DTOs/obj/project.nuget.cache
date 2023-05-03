@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "h2Lu8o7iMv1032+Wwb4O/jU54LtOSWTQnru7klJb/5yRi5Kce7Qzw7ofXGxR9OPipjY9YHEmZG0NCTopViKYWQ==",
+  "dgSpecHash": "fAEoseSctRmVG2fgIqwEgFrISgY17dS8xZ9PEHNbfZxMjF29H8jo23GSlPOCtfYPiGCn0mzzZSc33sJ7A2A1VQ==",
   "success": true,
   "projectFilePath": "F:\\e-commerce-Angular-.net-Core-\\DTOs\\DTOs.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\taha\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
