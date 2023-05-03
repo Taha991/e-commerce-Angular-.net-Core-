@@ -13,7 +13,14 @@ namespace API.Helpers
     {
         public MappingProfiles()
         {
-            CreateMap<Product, ProductToReturnDto>();
+            CreateMap<Product, ProductToReturnDto>()
+
+                // showing Product names o for output 
+                .ForMember(p=> p.ProductBrand , o=>o.MapFrom(s=>s.ProductBrand.Name))
+                .ForMember(p => p.ProductType, o=> o.MapFrom(s => s.ProductType.Name))
+                .ForMember(p => p.PictureUrl, o=> o.MapFrom<ProductUrlResolver>());
+
+
         }
 
 

@@ -36,16 +36,7 @@ namespace API.Controllers
         {
             var spec = new ProductWithTypesAndBrandsSpecification();
             var products = await _productRepo.ListAsync(spec);
-            return products.Select(product => new ProductToReturnDto()
-            {
-                Id = product.Id,
-                Description = product.Description,
-                Name = product.Name,
-                PictureUrl = product.PictureUrl,
-                Price = product.Price,
-                ProductBrand = product.ProductBrand.Name,
-                ProductType = product.ProductType.Name
-            }).ToList();
+            return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
         }
 
         [HttpGet("{id}")]
