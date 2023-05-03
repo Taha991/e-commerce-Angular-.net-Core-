@@ -2,6 +2,7 @@
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
+using DTOs;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -40,8 +41,9 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public  async Task<ActionResult<Product>>  GetProduct(int id)
         {
-            var product = await _productRepo.GetByIdAsync(id) ;
-            return Ok(product);
+            var spec = new ProductWithTypesAndBrandsSpecification(id);
+            var product = await _productRepo.GetEntityWithSPec(spec) ;
+            return new ProductToReturnDto();
         }
 
         [HttpGet("brands")]

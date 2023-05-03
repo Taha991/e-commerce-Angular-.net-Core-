@@ -668,6 +668,16 @@
           "bin/placeholder/Core.dll": {}
         }
       },
+      "DTOs/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/DTOs.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTOs.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1733,6 +1743,11 @@
       "path": "../Core/Core.csproj",
       "msbuildProject": "../Core/Core.csproj"
     },
+    "DTOs/1.0.0": {
+      "type": "project",
+      "path": "../DTOs/DTOs.csproj",
+      "msbuildProject": "../DTOs/DTOs.csproj"
+    },
     "Infrastructure/1.0.0": {
       "type": "project",
       "path": "../Infrastructure/Infrastructure.csproj",
@@ -1742,6 +1757,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Core >= 1.0.0",
+      "DTOs >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
@@ -1778,6 +1794,9 @@
           "projectReferences": {
             "F:\\e-commerce-Angular-.net-Core-\\Core\\Core.csproj": {
               "projectPath": "F:\\e-commerce-Angular-.net-Core-\\Core\\Core.csproj"
+            },
+            "F:\\e-commerce-Angular-.net-Core-\\DTOs\\DTOs.csproj": {
+              "projectPath": "F:\\e-commerce-Angular-.net-Core-\\DTOs\\DTOs.csproj"
             },
             "F:\\e-commerce-Angular-.net-Core-\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "F:\\e-commerce-Angular-.net-Core-\\Infrastructure\\Infrastructure.csproj"
