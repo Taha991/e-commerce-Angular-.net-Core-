@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\API"
   ],
-  "SelectedNode": "\\Full Project.sln",
+  "SelectedNode": "\\API\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
