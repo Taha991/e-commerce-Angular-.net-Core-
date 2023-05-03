@@ -1,6 +1,7 @@
 ﻿
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specifications;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +32,8 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
-            var products = await _productRepo.ListAllAsync();
+            var spec = new ProductWithTypesAndBrandsSpecification();
+            var products = await _productRepo.ListAsync(spec);
             return Ok(products);
         }
 
@@ -51,7 +53,7 @@ namespace API.Controllers
         [HttpGet("types")]
         public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
         {
-            return Ok(await _productTypeRepo.ListAllAsync();
+            return Ok(await _productTypeRepo.ListAllAsync());
         }
 
     }
