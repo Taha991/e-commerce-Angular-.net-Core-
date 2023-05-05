@@ -1,11 +1,19 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using API.Errors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("errors/{code}")]
     [ApiController]
-    public class ErrorController : ControllerBase
+    public class ErrorController : BaseApiController
     {
+
+        public IActionResult Error(int code)
+        {
+            return new ObjectResult(new ApiResponse(code));
+        }
     }
+
+
 }
