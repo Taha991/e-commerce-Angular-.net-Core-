@@ -7,4 +7,5 @@ export class ShopParams
   // i made it -1 instate of 1 bcs i have bug idk what is this
   pageNumber=-1;
   pageSize=6;
+  search='';
 }

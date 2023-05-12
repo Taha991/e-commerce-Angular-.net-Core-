@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './paging-header/paging-header.component';
+import { PagerComponent } from './pager/pager.component';
 
 
 @NgModule({
   declarations: [
-    PagingHeaderComponent
+    PagingHeaderComponent,
+    PagerComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { PagingHeaderComponent } from './paging-header/paging-header.component';
     PaginationModule.forRoot()
   ],
   exports:[PaginationModule,
-    PagingHeaderComponent
+    PagingHeaderComponent,
+    PagerComponent
   ]
 })
 export class SharedModule { }
