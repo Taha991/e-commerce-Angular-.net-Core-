@@ -14,7 +14,6 @@ namespace API.Controllers
     [ApiController]
     public class ProductController : BaseApiController
     {
-        private readonly StoreContext _storeContext;
         private readonly IProductRepository _productRepository;
         private readonly IGenericRepository<ProductBrand> _productBrandRepo;
         private readonly IGenericRepository<Product> _productRepo;
@@ -24,7 +23,6 @@ namespace API.Controllers
         public ProductController(StoreContext storeContext  , IProductRepository productRepository ,IGenericRepository<ProductBrand> productBrandRepo,
             IGenericRepository<Product> productRepo , IGenericRepository<ProductType> ProductTypeRepo , IMapper mapper)
         {
-            _storeContext = storeContext;
             _productRepository = productRepository;
             _productBrandRepo = productBrandRepo;
             _productRepo = productRepo;
@@ -36,6 +34,7 @@ namespace API.Controllers
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams productParams)
         {
             var spec = new ProductWithTypesAndBrandsSpecification(productParams);
+
             var countSpec = new ProductWithFiltersForCount(productParams);
 
             var totalItems = await _productRepo.CountAsync(countSpec);

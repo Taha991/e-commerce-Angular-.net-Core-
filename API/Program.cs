@@ -25,14 +25,15 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 // adding automapper 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddCors(opt =>
 {
-    opt.AddPolicy("AllowAnyOrigin", policy =>
+    opt.AddPolicy("CorsPolicy", policy =>
     {
-        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins();
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200");
     });
 });
-
+    
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -49,8 +50,7 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
-app.UseCors( opt => 
-opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 

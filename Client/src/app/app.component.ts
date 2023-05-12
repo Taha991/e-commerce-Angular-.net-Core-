@@ -13,16 +13,17 @@ export class AppComponent implements OnInit {
   constructor(private http:HttpClient){}
   products:any[]=[];
   ngOnInit(): void {
-      this.http.get<Pagination<Product[]>>("https://localhost:7275/api/product?pageSize=50").subscribe({
-        next: (response)=> {
-          console.log (response)
-          this.products = response.data
-        },
-        error: error=> console.log(error),
-        complete: ()=> {
-          console.log("Request Completed")
-          console.log("extra statments")
+      this.http.get("https://localhost:7275/api/product").subscribe({
+        next :(response :any) => this.products = response.data,
+        error:error => console.error(error),
+        complete:() =>{
+          console.log("Requset complet");
+          console.log("Extra statment");
+
+
         }
+
+
       })
   }
 }

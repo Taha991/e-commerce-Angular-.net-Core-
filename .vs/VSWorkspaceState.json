@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\API"
+    "\\API",
+    "\\API\\Controllers"
   ],
   "SelectedNode": "\\API\\Program.cs",
   "PreviewInSolutionExplorer": false

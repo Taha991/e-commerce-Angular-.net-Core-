@@ -6,14 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Specifications
-{
+{   
     public class ProductWithTypesAndBrandsSpecification : BaseSpecification<Product>
     {
 
         public ProductWithTypesAndBrandsSpecification(ProductSpecParams productParams)
-            : base(x => (!productParams.BrandId.HasValue || x.ProductBrandId == productParams.BrandId) &&
-            (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId) &&
-            (string.IsNullOrEmpty(productParams.Search) || x.Name.ToLower().Contains(productParams.Search))
+            : base(x =>
+             (string.IsNullOrEmpty(productParams.Search) || x.Name.ToLower().Contains(productParams.Search) &&
+            (!productParams.BrandId.HasValue || x.ProductBrandId == productParams.BrandId) &&
+            (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId)
+           )
             )
         {
             AddIncludes(x => x.ProductType);
@@ -28,7 +30,7 @@ namespace Core.Specifications
                     case  "priceAsc":
                         AddOrderBy(p=> p.Price);
                         break;
-
+ 
                     case "priceDesc":
                         AddOrderByDescending(p => p.Price);
                         break;  
