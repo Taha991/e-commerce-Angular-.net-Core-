@@ -3,7 +3,7 @@ import { ShopService } from '../shop.service';
 import { Product } from 'src/app/shared/models/product';
 import { Brand } from 'src/app/shared/models/brands';
 import { Type } from 'src/app/shared/models/types';
-import { ShopParams } from 'src/app/shared/models/shopparams';
+import { ShopParams } from 'src/app/shared/models/shopParams';
 
 @Component({
   selector: 'app-shop',
@@ -85,5 +85,14 @@ export class ShopComponent implements OnInit {
   {
     this.shopParams.sort = event.target.value;
     this.getProducts();
+  }
+
+  onPageChanged(event:any)
+  {
+    if(this.shopParams.pageNumber!== event.page)
+    {
+      this.shopParams.pageNumber = event.page;
+      this.getProducts();
+    }
   }
 }
