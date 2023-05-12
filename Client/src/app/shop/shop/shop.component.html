@@ -1,59 +1,58 @@
 <div class="container">
   <div class="row">
-
     <section class="col-3">
-
       <h5 class="text-warning ms-3">Sort</h5>
-      <select class="form-select mb-4">
-
-        <option >Alphapitical</option>
-        <option >Price : Low To High</option>
-        <option >Price : Low To High</option>
-
+      <select class="form-select mb-4" (change)="onSortSelected($event)">
+        <option *ngFor="let option of sortOptions" [value] ="option.value">
+          {{option.name}}
+        </option>
       </select>
 
+      <h5 class="text-warning ms-3">Brands</h5>
+      <ul class="list-group my-3">
+        <li
+          class="list-group-item"
+          *ngFor="let brand of brands"
+          [class.active]="brand.id === brandIdSelected"
+          [value]="brand.id"
+          (click)="onBrandSelected(brand.id)"
+        >
+          {{ brand.name }}
+        </li>
+      </ul>
 
-    <h5 class="text-warning ms-3">Brands</h5>
-    <ul class="list-group my-3">
-      <li class="list-group-item" *ngFor="let brand of brands">{{brand.name}}</li>
+      <h5 class="text-warning ms-3">Types</h5>
+      <ul class="list-group my-3">
+        <li
+          class="list-group-item"
+          *ngFor="let type of types"
+          [class.active]="type.id === typeIdSelected"
+          (click)="onTypeSelected(type.id)"
+        >
+          {{ type.name }}
+        </li>
+      </ul>
+    </section>
 
-    </ul>
-
-    <h5 class="text-warning ms-3">Types</h5>
-    <ul class="list-group my-3">
-      <li class="list-group-item" *ngFor="let type of types">{{type.name}}</li>
-
-    </ul>
-  </section>
-
-  <section class="col-9">
-
-    <div class="d-flex justify-content-between align-items-center pb-2">
-      <header>
-        <span>Showing <strong>10</strong> of <strong>20</strong> Results</span>
-      </header>
-      <div class="d-flex mt-2">
-        <input type="text" placeholder="Search" class="form-control me-2">
-        <button class="btn btn-outline-primary mx-2">Search</button>
-        <button class="btn btn-outline-success ">Reset</button>
+    <section class="col-9">
+      <div class="d-flex justify-content-between align-items-center pb-2">
+        <header>
+          <span
+            >Showing <strong>10</strong> of <strong>20</strong> Results</span
+          >
+        </header>
+        <div class="d-flex mt-2">
+          <input type="text" placeholder="Search" class="form-control me-2" />
+          <button class="btn btn-outline-primary mx-2">Search</button>
+          <button class="btn btn-outline-success">Reset</button>
+        </div>
       </div>
-    </div>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col" *ngFor="let product of products">
-        <app-product-item [product]="product"></app-product-item>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col" *ngFor="let product of products">
+          <app-product-item [product]="product"></app-product-item>
+        </div>
       </div>
-
-
-
-
-
-
-
-
-    </div>
-
-
-  </section>
+    </section>
   </div>
 </div>
