@@ -15,20 +15,14 @@
 
     <h5 class="text-warning ms-3">Brands</h5>
     <ul class="list-group my-3">
-      <li class="list-group-item active">An Active Item</li>
-      <li class="list-group-item ">Second Item</li>
-      <li class="list-group-item ">Third Item</li>
-      <li class="list-group-item ">Fourth Item</li>
-      <li class="list-group-item ">Fifth Item</li>
+      <li class="list-group-item" *ngFor="let brand of brands">{{brand.name}}</li>
+
     </ul>
 
     <h5 class="text-warning ms-3">Types</h5>
     <ul class="list-group my-3">
-      <li class="list-group-item active">An Active Item</li>
-      <li class="list-group-item ">Second Item</li>
-      <li class="list-group-item ">Third Item</li>
-      <li class="list-group-item ">Fourth Item</li>
-      <li class="list-group-item ">Fifth Item</li>
+      <li class="list-group-item" *ngFor="let type of types">{{type.name}}</li>
+
     </ul>
   </section>
 
