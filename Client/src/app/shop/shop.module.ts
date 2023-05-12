@@ -12,6 +12,7 @@ import { ShopComponent } from './shop/shop.component';
   imports: [
     CommonModule,
     ShopRoutingModule
-  ]
+  ],
+  exports:[ShopComponent]
 })
 export class ShopModule { }

@@ -15,7 +15,7 @@ export class ShopService {
   baseUrl = "https://localhost:7275/api/"
   getProducts ()
   {
-    return this.http.get<Pagination<Product>>(this.baseUrl+'product')
+    return this.http.get<Pagination<Product[]>>(this.baseUrl+'product?pageSize=1')
   }
 
 
