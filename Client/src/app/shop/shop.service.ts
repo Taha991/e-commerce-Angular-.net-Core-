@@ -39,5 +39,10 @@ export class ShopService {
 
   }
 
+  getProduct(id:number)
+  {
+    return this.http.get<Product>(this.baseUrl+'product/'+id);
+  }
+
 
 }
