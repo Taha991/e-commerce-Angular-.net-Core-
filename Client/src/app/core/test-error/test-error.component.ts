@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class TestErrorComponent implements OnInit {
 
-  baseUrl = environment.apiUrl;
+  baseUrl = 'https://localhost:7275/api/';
   constructor(private http:HttpClient) {
 
   }
