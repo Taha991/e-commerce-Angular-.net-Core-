@@ -4,7 +4,7 @@ using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
-
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +33,15 @@ builder.Services.AddCors(opt =>
         policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200");
     });
 });
+
+// setting up redis
+builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
+{
+    var options = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
+    return ConnectionMultiplexer.Connect(options);
+});
+
+
     
 var app = builder.Build();
 
