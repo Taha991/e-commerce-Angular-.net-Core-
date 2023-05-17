@@ -19,6 +19,7 @@ builder.Services.AddDbContext<StoreContext>(option =>
 option.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 // DB Generic Repository
