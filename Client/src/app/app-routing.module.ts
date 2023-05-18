@@ -11,9 +11,12 @@ const routes: Routes = [
   {path:'test-error' , component:TestErrorComponent},
   {path:'server-error' , component:ServerErrorComponent},
   {path:'not-found'  , component:NotFoundComponent},
+  // adding lazy loading
   {path:'shop' , loadChildren:()=>import('./shop/shop.module').then(m=>m.ShopModule)},
   // adding lazy loading
   {path:'basket' , loadChildren:()=>import('./basket/basket.module').then(m=>m.BasketModule)},
+   // adding lazy loading
+   {path:'checkout' , loadChildren:()=>import('./checkout/checkout.module').then(m=>m.CheckoutModule)},
 
   {path:'**' , redirectTo:'' , pathMatch:'full'}
 ];
