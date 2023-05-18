@@ -12,6 +12,9 @@ const routes: Routes = [
   {path:'server-error' , component:ServerErrorComponent},
   {path:'not-found'  , component:NotFoundComponent},
   {path:'shop' , loadChildren:()=>import('./shop/shop.module').then(m=>m.ShopModule)},
+  // adding lazy loading
+  {path:'basket' , loadChildren:()=>import('./basket/basket.module').then(m=>m.BasketModule)},
+
   {path:'**' , redirectTo:'' , pathMatch:'full'}
 ];
 

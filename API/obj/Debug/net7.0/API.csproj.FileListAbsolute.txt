@@ -74,3 +74,5 @@ F:\e-commerce-Angular-.net-Core-\API\bin\Debug\net7.0\Infrastructure.pdb
 F:\e-commerce-Angular-.net-Core-\API\bin\Debug\net7.0\AutoMapper.dll
 F:\e-commerce-Angular-.net-Core-\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 F:\e-commerce-Angular-.net-Core-\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
+F:\e-commerce-Angular-.net-Core-\API\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+F:\e-commerce-Angular-.net-Core-\API\bin\Debug\net7.0\StackExchange.Redis.dll
