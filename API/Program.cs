@@ -1,9 +1,11 @@
 
 using API.Middleware;
+using Core.Identity;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Identity;
 using Infrastructure.Repository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
 
@@ -24,6 +26,15 @@ builder.Services.AddDbContext<AppIdentityDbContext>(option =>
 option.UseSqlite(builder.Configuration.GetConnectionString("IdentityConnection"))
 );
 
+builder.Services.AddIdentityCore<AppUser>(opt =>
+{
+
+})
+    .AddEntityFrameworkStores<AppIdentityDbContext>()
+    .AddSignInManager<SignInManager<AppUser>>();
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
@@ -47,7 +58,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(c =>
     var options = ConfigurationOptions.Parse(builder.Configuration.GetConnectionString("Redis"));
     return ConnectionMultiplexer.Connect(options);
 });
-
+    
 
 
 
