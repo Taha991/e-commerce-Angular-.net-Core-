@@ -5,10 +5,12 @@ using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Identity;
 using Infrastructure.Repository;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using StackExchange.Redis;
 using System.Text;
 
@@ -53,6 +55,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     });
 
 
+
 builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
@@ -63,7 +66,40 @@ builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepositor
 // adding automapper 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<ITokenService, ITokenService>();
+builder.Services.AddScoped<ITokenService, TokenService>();
+
+builder.Services.AddSwaggerGen(option =>
+{
+    option.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
+    option.ResolveConflictingActions(x => x.First());
+    option.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        In = ParameterLocation.Header,
+        
+        Description = "Please enter a valid token",
+       
+    });
+    option.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                },
+                Name ="Bearer",
+                In = ParameterLocation.Header,
+            },
+
+            new string[]{}
+        }
+    });
+});
 
 builder.Services.AddCors(opt =>
 {
@@ -101,6 +137,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseCors("CorsPolicy");
+
+app.UseAuthentication();
+app.UseRouting();
 
 app.UseAuthorization();
 

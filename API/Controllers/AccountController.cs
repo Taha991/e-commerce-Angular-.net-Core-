@@ -2,6 +2,7 @@
 using API.Errors;
 using Core.Identity;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,14 @@ namespace API.Controllers
             _signInManager = signInManager;
             _tokenService = tokenService;
         }
+
+        [HttpGet("secrete")]
+        [Authorize]
+        public string GetSecrete()
+        {
+            return "secret sting";
+        }
+
 
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
