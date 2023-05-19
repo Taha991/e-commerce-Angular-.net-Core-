@@ -89,17 +89,21 @@ app.MapControllers();
 using var scope = app.Services.CreateScope();
 
 var Services = scope.ServiceProvider;
- 
+
+
+//sedding data
+
 var context  = Services.GetRequiredService<StoreContext>();
 
 var identityContext = Services.GetRequiredService<AppIdentityDbContext>();
-
 var userManger = Services.GetRequiredService<UserManager<AppUser>>();
 
 var Logger = Services.GetRequiredService<ILogger<StoreContext>>();
 
 try
 {
+    //sedding data
+
     await context.Database.MigrateAsync();
     await identityContext.Database.MigrateAsync();
     await StoreContextSeed.SeedAsync(context);
