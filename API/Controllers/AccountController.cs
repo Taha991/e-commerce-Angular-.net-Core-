@@ -1,5 +1,6 @@
 ﻿using API.Dtos;
 using API.Errors;
+using API.Extentions;
 using Core.Identity;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -83,8 +84,8 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
-            var email = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
-            var user = await _userManager.FindByEmailAsync(email);
+
+            var user = await _userManager.FindByEmailFromClaimsPrincipal(User);
 
             return new UserDto
             {
@@ -103,8 +104,7 @@ namespace API.Controllers
         [HttpGet("address")]
         public async Task<ActionResult<Address>> GetUserAddress()
         {
-            var email = HttpContext.User?.Claims?.FirstOrDefault(x => x.Type == ClaimTypes.Email)?.Value;
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByEmailFromClaimsPrincipal(User);
 
             return user.Address;
         }
