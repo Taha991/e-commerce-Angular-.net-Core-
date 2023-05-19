@@ -92,12 +92,18 @@ var Services = scope.ServiceProvider;
  
 var context  = Services.GetRequiredService<StoreContext>();
 
+var identityContext = Services.GetRequiredService<AppIdentityDbContext>();
+
+var userManger = Services.GetRequiredService<UserManager<AppUser>>();
+
 var Logger = Services.GetRequiredService<ILogger<StoreContext>>();
 
 try
 {
     await context.Database.MigrateAsync();
+    await identityContext.Database.MigrateAsync();
     await StoreContextSeed.SeedAsync(context);
+    await AppIdentityDbContextSeed.SeedUserAsync(userManger);
 }
 catch(Exception ex)
 {
