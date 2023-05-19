@@ -53,7 +53,7 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.4, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -135,7 +135,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -209,6 +209,12 @@
               "version": "[7.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.4, )"
             },
