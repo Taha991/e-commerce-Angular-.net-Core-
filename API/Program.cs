@@ -5,9 +5,12 @@ using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Identity;
 using Infrastructure.Repository;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using StackExchange.Redis;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,7 +36,23 @@ builder.Services.AddIdentityCore<AppUser>(opt =>
     .AddEntityFrameworkStores<AppIdentityDbContext>()
     .AddSignInManager<SignInManager<AppUser>>();
 
-builder.Services.AddAuthentication();
+var jwt = builder.Configuration.GetSection("Token");
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
+    options=>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["key"])),
+            ValidIssuer = jwt["Issuer"],
+            ValidateIssuer =  true,
+            ValidateAudience = false
+
+        };
+    });
+
+
 builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
