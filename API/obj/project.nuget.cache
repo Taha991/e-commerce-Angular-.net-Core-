@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RMcpd4q5CS3bhnq+Yb65E45PTgRHp6GiIDvNjkAkjqRP8lBgOjLECOPsjXczGtUMH1R8Cc8fxE5sD5v2lMZGWg==",
+  "dgSpecHash": "3QOF3APbCe/VYmk1sVLH+W7pgJSy+vOD+vtSK3JSCdxW183nlwGkXsaKu2M8kVaQ3+afYfYxKz2z6PO5hlQqmw==",
   "success": true,
   "projectFilePath": "F:\\e-commerce-Angular-.net-Core-\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -76,7 +76,7 @@
     "C:\\Users\\taha\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
-    "C:\\Users\\taha\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.1\\system.identitymodel.tokens.jwt.6.15.1.nupkg.sha512",
+    "C:\\Users\\taha\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.30.1\\system.identitymodel.tokens.jwt.6.30.1.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\taha\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
