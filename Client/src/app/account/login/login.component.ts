@@ -8,12 +8,13 @@ import { AccountService } from '../account.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
 export class LoginComponent {
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required)
   })
-  returnUrl: string;
+  returnUrl: string="";
 
   constructor(private accountService: AccountService, private router: Router,
     private activatedRoute: ActivatedRoute) {
@@ -24,5 +25,6 @@ export class LoginComponent {
     this.accountService.login(this.loginForm.value).subscribe({
       next: () => this.router.navigateByUrl(this.returnUrl)
     })
+
   }
 }
