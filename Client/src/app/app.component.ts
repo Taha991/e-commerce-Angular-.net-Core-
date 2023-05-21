@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pagination } from './shared/models/paging';
 import { Product } from './shared/models/product';
 import { BasketService } from './basket/basket.service';
+import { AccountService } from './account/account.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { BasketService } from './basket/basket.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private http:HttpClient, private basketService:BasketService){}
+  constructor(private http:HttpClient, private basketService:BasketService , private accountService:AccountService){}
 
   products:any[]=[];
 
@@ -30,6 +31,12 @@ export class AppComponent implements OnInit {
   }
 
   title = 'Shopping';
+
+  loadCurrentUser()
+  {
+    const token = localStorage.getItem('token');
+    if(token) this.accountService.loadCurrentUser(token).subscribe();
+  }
 }
 
 

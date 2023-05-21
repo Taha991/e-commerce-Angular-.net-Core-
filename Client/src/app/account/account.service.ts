@@ -1,7 +1,7 @@
 import { Injectable  , OnInit} from '@angular/core';
 import { User } from '../shared/models/user';
 import { BehaviorSubject, map } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {  Router } from '@angular/router';
 
 @Injectable({
@@ -18,6 +18,21 @@ export class AccountService implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  loadCurrentUser(token:string)
+  {
+  let headers = new HttpHeaders();
+  headers = headers.set('Authorization' , `Bearer ${token}`);
+
+  return this.http.get<User>(this.baseUrl+'account' ,{headers}).pipe(
+    map(user =>{
+      localStorage.setItem('token', user.token);
+      this.currentUserSource.next(user);
+    })
+  )
+  }
+
 
   register(value:any)
   {
