@@ -11,7 +11,7 @@ export class AccountService implements OnInit {
   baseUrl = 'https://localhost:7275/api/';
 
   private currentUserSource = new BehaviorSubject<User|null>(null);
-  currentUserSource$= this.currentUserSource.asObservable();
+  currentUser$= this.currentUserSource.asObservable();
 
 
   constructor(private http:HttpClient, private router:Router) { }
