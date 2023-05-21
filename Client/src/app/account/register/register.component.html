@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="d-flex justify-content-center mt-5">
+  <div class="col-3">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="text-center mb-4">
+        <h1 class="mb-3">Login</h1>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+         type="text"
+         [class.is-invalid]="registerForm.get('displayName')?.invalid&&registerForm.get('displayName')?.touched"
+         formControlName="displayName"
+          class="form-control"
+          id="floatingEmail"
+          placeholder="name@example.com">
+        <label for="floatingEmail">Display Name</label>
+        <div *ngIf="registerForm.get('displayName')?.errors?.['required']" class="invalid-feedback">displayName</div>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+         type="email"
+         [class.is-invalid]="registerForm.get('email')?.invalid&&registerForm.get('email')?.touched"
+         formControlName="email"
+          class="form-control"
+          id="floatingEmail"
+          placeholder="name@example.com">
+        <label for="floatingEmail">Email Address</label>
+        <div *ngIf="registerForm.get('email')?.errors?.['required']" class="invalid-feedback">Email Is Required</div>
+      </div>
+
+
+      <div class="form-floating">
+        <input type="password"
+        formControlName="password"
+        [class.is-invalid]="registerForm.get('password')?.invalid&&registerForm.get('password')?.touched"
+        class="form-control"
+        id="floatingPassword"
+         placeholder="password">
+        <label for="floatingPassword">Password </label>
+        <div *ngIf="registerForm.get('password')?.errors?.['required']" class="invalid-feedback">Password Is Required</div>
+
+      </div>
+
+
+      <div class="d-grid">
+        <button [disabled]="registerForm.invalid" class="btn btn-lg btn-primary mt-3" type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+
+</div>
