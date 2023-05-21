@@ -17,6 +17,8 @@ const routes: Routes = [
   {path:'basket' , loadChildren:()=>import('./basket/basket.module').then(m=>m.BasketModule)},
    // adding lazy loading
    {path:'checkout' , loadChildren:()=>import('./checkout/checkout.module').then(m=>m.CheckoutModule)},
+   // adding lazy loading
+   {path:'account' , loadChildren:()=>import('./account/account.module').then(m=>m.AccountModule)},
 
   {path:'**' , redirectTo:'' , pathMatch:'full'}
 ];

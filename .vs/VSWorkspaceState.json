@@ -4,6 +4,6 @@
     "\\API",
     "\\API\\Controllers"
   ],
-  "SelectedNode": "\\API\\appsettings.json",
+  "SelectedNode": "\\API\\Controllers\\AccountController.cs",
   "PreviewInSolutionExplorer": false
 }
