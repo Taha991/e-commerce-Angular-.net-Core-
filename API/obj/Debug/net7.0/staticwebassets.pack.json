@@ -1,0 +1,97 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\.DS_Store",
+      "PackagePath": "staticwebassets\\images\\.DS_Store"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\boot-ang1.png",
+      "PackagePath": "staticwebassets\\images\\products\\boot-ang1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\boot-ang2.png",
+      "PackagePath": "staticwebassets\\images\\products\\boot-ang2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\boot-core1.png",
+      "PackagePath": "staticwebassets\\images\\products\\boot-core1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\boot-core2.png",
+      "PackagePath": "staticwebassets\\images\\products\\boot-core2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\boot-redis1.png",
+      "PackagePath": "staticwebassets\\images\\products\\boot-redis1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\glove-code1.png",
+      "PackagePath": "staticwebassets\\images\\products\\glove-code1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\glove-code2.png",
+      "PackagePath": "staticwebassets\\images\\products\\glove-code2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\glove-react1.png",
+      "PackagePath": "staticwebassets\\images\\products\\glove-react1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\glove-react2.png",
+      "PackagePath": "staticwebassets\\images\\products\\glove-react2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\hat-core1.png",
+      "PackagePath": "staticwebassets\\images\\products\\hat-core1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\hat-react1.png",
+      "PackagePath": "staticwebassets\\images\\products\\hat-react1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\hat-react2.png",
+      "PackagePath": "staticwebassets\\images\\products\\hat-react2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\sb-ang1.png",
+      "PackagePath": "staticwebassets\\images\\products\\sb-ang1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\sb-ang2.png",
+      "PackagePath": "staticwebassets\\images\\products\\sb-ang2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\sb-core1.png",
+      "PackagePath": "staticwebassets\\images\\products\\sb-core1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\sb-core2.png",
+      "PackagePath": "staticwebassets\\images\\products\\sb-core2.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\sb-react1.png",
+      "PackagePath": "staticwebassets\\images\\products\\sb-react1.png"
+    },
+    {
+      "Id": "F:\\e-commerce-Angular-.net-Core-\\API\\wwwroot\\images\\products\\sb-ts1.png",
+      "PackagePath": "staticwebassets\\images\\products\\sb-ts1.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
