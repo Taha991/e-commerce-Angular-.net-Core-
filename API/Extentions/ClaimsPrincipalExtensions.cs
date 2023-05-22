@@ -1,6 +1,12 @@
-﻿namespace API.Extentions
+﻿using System.Security.Claims;
+
+namespace API.Extensions
 {
-    public class ClaimsPrincipalExtensions
+    public static class ClaimsPrincipalExtensions
     {
+        public static string RetrieveEmailFromPrincipal(this ClaimsPrincipal user)
+        {
+            return user.FindFirstValue(ClaimTypes.Email);
+        }
     }
 }

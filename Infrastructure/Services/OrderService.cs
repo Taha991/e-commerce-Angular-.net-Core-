@@ -1,6 +1,7 @@
 ﻿using Core.Entities.OrderAggregate;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specifications;
 
 namespace Infrastructure.Services
 {
@@ -37,7 +38,7 @@ namespace Infrastructure.Services
 
             // check to see if order exists
             var spec = new OrderByPaymentIntentIdSpecification(basket.PaymentIntentId);
-            var order = await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+            var order = await _unitOfWork.Repository<Order>().GetEntityWithSPec(spec);
 
             if (order != null)
             {
@@ -72,7 +73,7 @@ namespace Infrastructure.Services
         {
             var spec = new OrdersWithItemsAndOrderingSpecification(id, buyerEmail);
 
-            return await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+            return await _unitOfWork.Repository<Order>().GetEntityWithSPec(spec);
         }
 
         public async Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail)

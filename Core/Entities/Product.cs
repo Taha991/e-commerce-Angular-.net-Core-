@@ -6,7 +6,7 @@
 
         public string Description { get; set; }
 
-        public double? Price { get; set; }
+        public float? Price { get; set; }
 
         public string PictureUrl { get; set; }
 
