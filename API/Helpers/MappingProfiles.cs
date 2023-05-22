@@ -3,11 +3,6 @@ using AutoMapper;
 using Core.Entities;
 using Core.Entities.OrderAggregate;
 using Core.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.Helpers
 {
@@ -23,11 +18,17 @@ namespace API.Helpers
                 .ForMember(p => p.PictureUrl, o=> o.MapFrom<ProductUrlResolver>());
 
 
-            CreateMap<Core.Entities.OrderAggregate.Address, AddressDto>().ReverseMap();
+
+            CreateMap<Address , AddressDto>().ReverseMap();
+
 
             CreateMap<CustomerBasketDto, CustomerBasket>().ReverseMap();
 
+
             CreateMap<BasketItemDto, BasketItem>().ReverseMap();
+
+            CreateMap<AddressDto, Core.Entities.OrderAggregate.Address>();
+
 
             CreateMap<Order, OrderToReturnDto>()
                   .ForMember(d => d.DeliveryMethod, o => o.MapFrom(s => s.DeliveryMethod.ShortName))
