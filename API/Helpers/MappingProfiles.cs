@@ -1,8 +1,8 @@
 ﻿using API.Dtos;
 using AutoMapper;
 using Core.Entities;
-using Core.Entities.OrderAggregate;
 using Core.Identity;
+using Core.Entities.OrderAggregate;
 
 namespace API.Helpers
 {
@@ -19,7 +19,7 @@ namespace API.Helpers
 
 
 
-            CreateMap<Address , AddressDto>().ReverseMap();
+            CreateMap<Core.Identity.Address, AddressDto>().ReverseMap();
 
 
             CreateMap<CustomerBasketDto, CustomerBasket>().ReverseMap();
