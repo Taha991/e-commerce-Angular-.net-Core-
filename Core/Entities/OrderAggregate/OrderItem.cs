@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.Entities.OrderAggregate
+﻿namespace Core.Entities.OrderAggregate
 {
-    internal class OrderItem
+    public class OrderItem : BaseEntity
     {
+        public OrderItem()
+        {
+        }
+
+        public OrderItem(ProductItemOrdered itemOrdered, double price, int quantity)
+        {
+            ItemOrdered = itemOrdered;
+            Price = price;
+            Quantity = quantity;
+        }
+
+        public ProductItemOrdered ItemOrdered { get; set; }
+        public double Price { get; set; }
+        public int Quantity { get; set; }
     }
 }
