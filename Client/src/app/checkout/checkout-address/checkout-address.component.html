@@ -11,22 +11,54 @@
   </div>
   <div class="row" formGroupName="addressForm">
       <div class="form-group col-6">
-          <app-text-input [label]="'First name'" formControlName="firstName"></app-text-input>
+        <div class="form-floating mb-3">
+          <input type="text"
+          formControlName="firstName"
+          class="form-control"
+          id="floatingFirstName"
+          >
+          <label for="floatingFirstName">First Name</label>
+        </div>
       </div>
-      <div class="form-group col-6">
-          <app-text-input [label]="'Last name'" formControlName="lastName"></app-text-input>
+      <div class="form-floating mb-3">
+        <input type="text"
+        formControlName="lastName"
+        class="form-control"
+        id="floatingLastName"
+        >
+        <label for="floatingLastName">Last Name</label>
       </div>
-      <div class="form-group col-6">
-          <app-text-input [label]="'Street'" formControlName="street"></app-text-input>
+      <div class="form-floating mb-3">
+        <input type="text"
+        formControlName="street"
+        class="form-control"
+        id="floatingStreet"
+        >
+        <label for="floatingStreet">Street</label>
       </div>
-      <div class="form-group col-6">
-          <app-text-input [label]="'City'" formControlName="city"></app-text-input>
+      <div class="form-floating mb-3">
+        <input type="text"
+        formControlName="city"
+        class="form-control"
+        id="floatingCity"
+        >
+        <label for="floatingCity">City</label>
       </div>
-      <div class="form-group col-6">
-          <app-text-input [label]="'State'" formControlName="state"></app-text-input>
+      <div class="form-floating mb-3">
+        <input type="text"
+        formControlName="state"
+        class="form-control"
+        id="floatingState"
+        >
+        <label for="floatingState">State</label>
       </div>
-      <div class="form-group col-6">
-          <app-text-input [label]="'Zip code'" formControlName="zipcode"></app-text-input>
+      <div class="form-floating mb-3">
+        <input type="text"
+        formControlName="zipCode"
+        class="form-control"
+        id="floatingZipCode"
+        >
+        <label for="floatingZipCode">ZipCode</label>
       </div>
   </div>
 </div>
