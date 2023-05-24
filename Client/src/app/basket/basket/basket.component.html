@@ -7,44 +7,11 @@
       <div class="container">
 
         <div class="row">
-          <div class="table-responsive">
-            <div class="table">
-              <thead class="bg-light text-uppercase">
-                <tr>
-                  <th><div class="py-2">Product</div></th>
-                  <th><div class="py-2">Price</div></th>
-                  <th><div class="py-2">Quantity</div></th>
-                  <th><div class="py-2">Total</div></th>
-                  <th><div class="py-2">Remove</div></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let item of basket.items">
-                  <th>
-                    <div class="p-2 d-inline-block">
-                      <img src="{{item.pictureUrl}}" alt="{{item.productName}}"
-                      class="img-fluid"
-                      style="max-height: 50px;">
+        <app-basket-summary>
+          (addItem)="incrementQuantity($event)"
+          (removeItem)="removeItem($event)"
 
-
-                    <div class="ms3 d-inline-block align-middle">
-                      <h5 class="mb-0">
-                        <a routerLink="/shop{{item.id}}" class="text-dark text-decoration-none " href="">
-                          {{item.productName}}
-                        </a>
-                      </h5>
-                      <span class="text-muted fst-italic ">
-                        type : {{item.type}}
-                      </span>
-                    </div>
-                  </div>
-                  </th>
-                </tr>
-
-                <td class="align-middle"><strong></strong></td>
-              </tbody>
-            </div>
-          </div>
+        </app-basket-summary>
           </div>
 
           <div class="row">
