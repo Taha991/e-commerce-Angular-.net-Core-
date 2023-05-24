@@ -35,7 +35,8 @@ import {CdkStepperModule} from '@angular/cdk/stepper'
     OrderTotalsComponent,
     ReactiveFormsModule,
     BsDropdownModule,
-    StepperComponent
+    StepperComponent,
+    CdkStepperModule
 
   ]
 })

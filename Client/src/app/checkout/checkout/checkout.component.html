@@ -1,7 +1,20 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-8">
-      <app-stepper></app-stepper>
+      <app-stepper [linearModeSelected]="false">
+        <cdk-step [label]="'Address'">
+          Step1
+        </cdk-step>
+        <cdk-step [label]="'Delivery'">
+          Step2
+        </cdk-step>
+        <cdk-step [label]="'Review'">
+          Step3
+        </cdk-step>
+        <cdk-step [label]="'Payment'">
+          Step4
+        </cdk-step>
+      </app-stepper>
     </div>
     <app-order-totals></app-order-totals>
   </div>
