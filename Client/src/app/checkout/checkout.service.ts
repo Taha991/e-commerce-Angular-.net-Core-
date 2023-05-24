@@ -9,7 +9,7 @@ import { Order, OrderToCreate } from '../shared/models/order';
   providedIn: 'root'
 })
 export class CheckoutService {
-  baseUrl = environment.apiUrl;
+  baseUrl = 'https://localhost:7275/api/';
 
   constructor(private http: HttpClient) { }
 
