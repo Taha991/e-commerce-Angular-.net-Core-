@@ -24,7 +24,7 @@ namespace Infrastructure.Services
             var items = new List<OrderItem>();
             foreach (var item in basket.Items)
             {
-            
+             // -*
             }
 
             // get delivery method from repo
