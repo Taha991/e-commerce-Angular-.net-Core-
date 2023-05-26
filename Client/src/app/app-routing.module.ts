@@ -5,6 +5,7 @@ import { TestErrorComponent } from './core/test-error/test-error.component';
 import { ServerErrorComponent } from './core/server-error/server-error.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { authGuard } from './core/guards/auth.guard';
+import { AuthGuard } from './core/guards/auth.guard.spec';
 
 
 const routes: Routes = [
@@ -19,11 +20,18 @@ const routes: Routes = [
    // adding lazy loading
    {
     path:'checkout' ,
-    canActivate:[authGuard],
+    canActivate:[AuthGuard],
     loadChildren:()=>import('./checkout/checkout.module').then(m=>m.CheckoutModule)
   },
    // adding lazy loading
    {path:'account' , loadChildren:()=>import('./account/account.module').then(m=>m.AccountModule)},
+
+   {
+    path:'orders',
+    canActivate:[AuthGuard],
+    loadChildren:()=>import('./orders/orders.module').then(m=>m.OrdersModule),
+    data:{breadcrumb:'Orders'}
+   },
 
   {path:'**' , redirectTo:'' , pathMatch:'full'}
 ];
