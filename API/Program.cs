@@ -68,6 +68,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
