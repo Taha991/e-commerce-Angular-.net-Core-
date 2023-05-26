@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@schematics/angular": "^9.1.0",
+    "@stripe/stripe-js": "^1.53.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.2.3",
     "cuid": "^3.0.0",
